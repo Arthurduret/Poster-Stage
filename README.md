@@ -63,4 +63,4 @@ Aucun autre problème structurel ou de syntaxe détecté (HTML valide, CSS sans 
 
 ## Auteur
 
-Arthur Duret — Stage A2 Informatique, Cycle Ingénieur, CESI École d'Ingénieurs (2025), mission SOREAM chez Airbus Helicopters.
+Arthur Duret — Stage A2 Informatique, Cycle Ingénieur, CESI École d'Ingénieurs (2026), mission SOREAM chez Airbus Helicopters.
