@@ -504,6 +504,12 @@
 
 </div>
 
+<!-- LIGHTBOX IMAGES -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:1100;background:rgba(4,8,15,0.93);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);align-items:center;justify-content:center;cursor:zoom-out;">
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 40px 80px rgba(0,0,0,0.8);">
+  <button onclick="closeLightbox()" style="position:fixed;top:18px;right:22px;background:rgba(46,125,196,0.1);border:1px solid rgba(90,174,232,0.25);border-radius:6px;color:#5AAEE8;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;">✕</button>
+</div>
+
 <!-- OVERLAY ZOOM -->
 <div id="overlay" class="overlay">
   <button id="overlay-close" class="overlay-close" title="Fermer">✕</button>
@@ -550,6 +556,31 @@ function openCard(i) {
   oHint.classList.add('show');
   hintTimer = setTimeout(() => oHint.classList.remove('show'), 3000);
 }
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+document.querySelectorAll('.visual-img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', e => {
+    e.stopPropagation();
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+function closeLightbox() {
+  lightbox.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lightbox.style.display === 'flex') closeLightbox();
+});
 
 function closeOverlay() {
   overlay.classList.remove('open');
