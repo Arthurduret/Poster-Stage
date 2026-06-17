@@ -533,7 +533,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowUp'   || e.key === 'PageUp')  { e.preventDefault(); if (cur > 0) { cur--; allCards[cur].scrollIntoView({behavior:'smooth',block:'start'}); } }
 });
 
-allCards.forEach((c, i) => c.addEventListener('click', e => { if (!e.target.closest('a') && !e.target.closest('.visual')) openCard(i); }));
+allCards.forEach((c, i) => c.addEventListener('click', e => { if (!e.target.closest('a')) openCard(i); }));
 overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
 oClose.addEventListener('click', closeOverlay);
 
@@ -548,6 +548,7 @@ function openCard(i) {
   if (inner) { inner.style.cursor='default'; inner.style.transform='none'; inner.style.filter='none'; }
   if (!overlay.classList.contains('open')) { overlay.classList.add('open'); document.body.style.overflow='hidden'; }
   else { oCard.style.animation='none'; oCard.offsetHeight; oCard.style.animation=null; }
+  bindLightboxInOverlay();
   clearTimeout(hintTimer);
   oHint.classList.add('show');
   hintTimer = setTimeout(() => oHint.classList.remove('show'), 3000);
@@ -556,17 +557,20 @@ function openCard(i) {
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-document.querySelectorAll('.visual').forEach(container => {
-  container.style.cursor = 'zoom-in';
-  container.addEventListener('click', e => {
-    const img = container.querySelector('.visual-img');
-    if (!img) return;
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+function bindLightboxInOverlay() {
+  oCard.querySelectorAll('.visual').forEach(container => {
+    container.style.cursor = 'zoom-in';
+    container.addEventListener('click', e => {
+      e.stopPropagation();
+      const img = container.querySelector('.visual-img');
+      if (!img) return;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
   });
-});
+}
 
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
