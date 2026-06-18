@@ -169,17 +169,17 @@
           </div>
         </div>
 
-        <!-- Contrainte annotation -->
-        <div class="hbar" style="margin-bottom:8px;">
-          <i class="ti ti-alert-triangle"></i>
-          <div class="hbar-t">Les câbles restent difficiles à annoter : <strong>peu représentés dans le nuage</strong> (quelques points sur des milliers), fins et linéaires - c'est précisément ce qui a justifié le développement d'un outil dédié.</div>
-        </div>
-
-        <!-- Image nuage de points brut -->
-        <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border-acc);box-shadow:0 0 14px rgba(0,174,239,0.12);">
-          <img src="images/nuage_point.png" alt="Nuage de points LiDAR brut" style="width:100%;display:block;border-radius:5px;max-height:70px;object-fit:cover;object-position:center;">
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:5px 9px;background:linear-gradient(transparent,rgba(4,8,15,0.88));font-family:var(--font-title);font-size:6.5px;font-weight:600;color:var(--blue-light);letter-spacing:0.4px;text-transform:uppercase;">
-            <i class="ti ti-3d-cube-sphere" style="margin-right:3px;"></i>Nuage de points LiDAR brut - avant annotation
+        <!-- Contrainte annotation + image -->
+        <div style="display:grid;grid-template-columns:1fr 180px;gap:8px;align-items:center;">
+          <div class="hbar" style="margin:0;">
+            <i class="ti ti-alert-triangle"></i>
+            <div class="hbar-t">Les câbles restent difficiles à annoter : <strong>peu représentés dans le nuage</strong> (quelques points sur des milliers), fins et linéaires - c'est précisément ce qui a justifié le développement d'un outil dédié.</div>
+          </div>
+          <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border-acc);box-shadow:0 0 12px rgba(0,174,239,0.15);">
+            <img src="images/nuage_point.png" alt="Nuage de points LiDAR brut" style="width:100%;display:block;border-radius:5px;height:90px;object-fit:cover;object-position:right center;">
+            <div style="position:absolute;bottom:0;left:0;right:0;padding:3px 6px;background:linear-gradient(transparent,rgba(4,8,15,0.9));font-family:var(--font-title);font-size:6px;font-weight:600;color:var(--blue-light);letter-spacing:0.3px;text-transform:uppercase;">
+              <i class="ti ti-3d-cube-sphere" style="margin-right:2px;"></i>Nuage brut
+            </div>
           </div>
         </div>
       </div>
