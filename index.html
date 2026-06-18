@@ -84,9 +84,58 @@
       </div>
     </div>
 
-    <!-- 3 - MISSION -->
+    <!-- 3 - LIDAR -->
     <div class="card card-full">
-      <div class="ch"><div class="cn">3</div><div class="ct">Définition de la mission</div></div>
+      <div class="ch"><div class="cn">3</div><div class="ct">Le LiDAR - technologie clé du projet</div></div>
+      <div class="cb">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+
+          <!-- Radar vs LiDAR -->
+          <div style="border:1px solid var(--border);border-radius:6px;padding:9px 11px;">
+            <div class="sl" style="margin-bottom:7px;">Radar vs LiDAR</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+              <div style="border:1px solid rgba(239,68,68,0.2);border-radius:4px;padding:7px 8px;background:rgba(239,68,68,0.03);">
+                <div style="font-family:var(--font-title);font-size:8px;font-weight:700;color:#fca5a5;margin-bottom:4px;">RADAR</div>
+                <div style="font-size:7.5px;color:var(--muted2);font-family:var(--font-body);line-height:1.6;">Ondes radio - détecte les gros objets à grande distance.<br><strong style="color:rgba(239,68,68,0.7);">Câbles & pylônes fins : invisibles</strong> — surface réfléchissante trop petite.</div>
+              </div>
+              <div style="border:1px solid var(--border-acc);border-radius:4px;padding:7px 8px;background:rgba(0,174,239,0.04);">
+                <div style="font-family:var(--font-title);font-size:8px;font-weight:700;color:var(--blue-light);margin-bottom:4px;">LIDAR</div>
+                <div style="font-size:7.5px;color:var(--muted2);font-family:var(--font-body);line-height:1.6;">Impulsions laser - précision centimétrique.<br><strong style="color:var(--blue-light);">Détecte les objets fins</strong> grâce à la haute résolution spatiale.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fonctionnement -->
+          <div style="border:1px solid var(--border);border-radius:6px;padding:9px 11px;">
+            <div class="sl" style="margin-bottom:7px;">Fonctionnement</div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div style="display:flex;gap:7px;align-items:flex-start;">
+                <div style="min-width:18px;height:18px;border-radius:50%;background:var(--blue-mid);display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-size:7px;font-weight:700;color:#fff;flex-shrink:0;">1</div>
+                <div style="font-size:7.5px;color:var(--muted);font-family:var(--font-body);line-height:1.5;"><strong style="color:var(--blue-pale);">Émission</strong> - le capteur tourne et envoie des milliers d'impulsions laser par seconde dans toutes les directions</div>
+              </div>
+              <div style="display:flex;gap:7px;align-items:flex-start;">
+                <div style="min-width:18px;height:18px;border-radius:50%;background:var(--blue-mid);display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-size:7px;font-weight:700;color:#fff;flex-shrink:0;">2</div>
+                <div style="font-size:7.5px;color:var(--muted);font-family:var(--font-body);line-height:1.5;"><strong style="color:var(--blue-pale);">Time of Flight</strong> - le temps de retour de chaque impulsion donne la distance précise au centimètre</div>
+              </div>
+              <div style="display:flex;gap:7px;align-items:flex-start;">
+                <div style="min-width:18px;height:18px;border-radius:50%;background:var(--blue-mid);display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-size:7px;font-weight:700;color:#fff;flex-shrink:0;">3</div>
+                <div style="font-size:7.5px;color:var(--muted);font-family:var(--font-body);line-height:1.5;"><strong style="color:var(--blue-pale);">Nuage de points</strong> - résultat : représentation 3D de l'environnement, chaque point = un retour laser</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contrainte annotation -->
+        <div class="hbar">
+          <i class="ti ti-alert-triangle"></i>
+          <div class="hbar-t">Les câbles restent difficiles à annoter : <strong>peu représentés dans le nuage</strong> (quelques points sur des milliers), fins et linéaires — c'est précisément ce qui a justifié le développement d'un outil dédié.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 - MISSION -->
+    <div class="card card-full">
+      <div class="ch"><div class="cn">4</div><div class="ct">Définition de la mission</div></div>
       <div class="cb">
         <div class="hbar" style="margin-bottom:10px;">
           <i class="ti ti-target"></i>
@@ -128,7 +177,7 @@
 
     <!-- 4 ORGANIGRAMME R&T -->
     <div class="card card-full">
-      <div class="ch"><div class="cn" style="font-size:9px;">4</div><div class="ct">Structure opérationnelle - Plateau Autonomie & Drones</div></div>
+      <div class="ch"><div class="cn" style="font-size:9px;">5</div><div class="ct">Structure opérationnelle - Plateau Autonomie & Drones</div></div>
       <div class="cb" style="padding:14px 18px;">
 
         <!-- Niveau 1 : Responsable -->
@@ -218,7 +267,7 @@
 
     <!-- 5 PIPELINE IA -->
     <div class="card card-full">
-      <div class="ch"><div class="cn" style="font-size:10px;">5</div><div class="ct">Pipeline d'entraînement IA - de l'extraction au modèle déployé</div></div>
+      <div class="ch"><div class="cn" style="font-size:10px;">6</div><div class="ct">Pipeline d'entraînement IA - de l'extraction au modèle déployé</div></div>
       <div class="cb" style="padding:12px 14px;">
         <svg width="100%" viewBox="0 0 680 420" role="img" style="display:block;">
           <defs>
@@ -309,7 +358,7 @@
 
     <!-- 6 - GANTT -->
     <div class="card card-full">
-      <div class="ch"><div class="cn">6</div><div class="ct">Planning réel - Gantt 12 semaines</div></div>
+      <div class="ch"><div class="cn">7</div><div class="ct">Planning réel - Gantt 12 semaines</div></div>
       <div class="cb">
         <table class="gantt">
           <thead><tr><th class="gl">Phase</th><th class="gw">S1</th><th class="gw">S2</th><th class="gw">S3</th><th class="gw">S4</th><th class="gw">S5</th><th class="gw">S6</th><th class="gw">S7</th><th class="gw">S8</th><th class="gw">S9</th><th class="gw">S10</th><th class="gw">S11</th><th class="gw">S12</th><th style="min-width:110px;text-align:left;padding-left:8px;">Jalons</th></tr></thead>
@@ -348,7 +397,7 @@
 
     <!-- 7 - PHASES -->
     <div class="card card-two">
-      <div class="ch"><div class="cn">7</div><div class="ct">Détail des phases</div></div>
+      <div class="ch"><div class="cn">8</div><div class="ct">Détail des phases</div></div>
       <div class="cb">
         <div class="phase"><div class="ph" style="border-top:2px solid rgba(90,174,232,0.4);"><div class="pn" style="background:rgba(90,174,232,0.2);color:var(--blue-pale);">1</div><div class="pt" style="color:var(--blue-pale);">Formation LiDAR, annotation & intégration hélicoptère</div><div class="pw" style="background:rgba(90,174,232,0.2);color:var(--blue-light);">S1</div></div><div class="pc"><div class="pr"><div class="pd" style="background:var(--blue-light);"></div><div class="ps">Fonctionnement d'un <strong>capteur LiDAR</strong> : Time of Flight, rotation, nuage de points 3D</div></div><div class="pr"><div class="pd" style="background:var(--blue-light);"></div><div class="ps">Contraintes d'intégration hélicoptère : vibrations, altitude, fréquence</div></div><div class="pr"><div class="pd" style="background:var(--blue-light);"></div><div class="ps">Standards : <strong>KITTI, nuScenes</strong> - formats industrie</div></div><span class="tag tag-blue">✦ Montée en compétence validée</span></div></div>
         <div class="phase"><div class="ph" style="border-top:2px solid var(--blue-mid);"><div class="pn" style="background:var(--blue-mid);color:#fff;">2</div><div class="pt" style="color:var(--blue-pale);">Comparaison des outils d'annotation LiDAR</div><div class="pw" style="background:var(--blue-mid);color:#fff;">S2</div></div><div class="pc"><div class="pr"><div class="pd" style="background:var(--blue-mid);"></div><div class="ps">Évaluation de <strong>CVAT, FiftyOne, Open3D, Labelbox</strong> : ergonomie 3D, compatibilité PCD</div></div><div class="pr"><div class="pd" style="background:var(--blue-mid);"></div><div class="ps">Tests sur données réelles - forces et limites identifiées</div></div><span class="tag tag-blue">✦ Rapport comparatif livré</span></div></div>
@@ -360,7 +409,7 @@
 
     <!-- 8 - MÉTHODES -->
     <div class="card card-one">
-      <div class="ch"><div class="cn">8</div><div class="ct">Méthodes & choix</div></div>
+      <div class="ch"><div class="cn">9</div><div class="ct">Méthodes & choix</div></div>
       <div class="cb">
 
         <!-- Démarche -->
@@ -429,7 +478,7 @@
 
     <!-- 9 - VISUELS -->
     <div class="card card-full">
-      <div class="ch"><div class="cn">9</div><div class="ct">Visuels - annotation en pratique</div></div>
+      <div class="ch"><div class="cn">10</div><div class="ct">Visuels - annotation en pratique</div></div>
       <div class="cb">
         <div class="visuals">
           <div class="visual"><img class="visual-img" src="images/nuage_point.png" alt="Nuage de points LiDAR brut" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="visual-ph" style="display:none;"><i class="ti ti-3d-cube-sphere"></i><span>nuage_points.png</span></div><div class="visual-cap"><div class="visual-tit">Nuage de points LiDAR brut</div><div class="visual-sub">48 291 points - avant annotation</div></div></div>
@@ -442,7 +491,7 @@
 
     <!-- 10 - BILAN -->
     <div class="card card-full">
-      <div class="ch"><div class="cn">10</div><div class="ct">Bilan - objectifs vs résultats obtenus</div></div>
+      <div class="ch"><div class="cn">11</div><div class="ct">Bilan - objectifs vs résultats obtenus</div></div>
       <div class="cb">
         <table class="btable">
           <thead><tr><th class="th-obj" style="width:25%;">Objectif initial</th><th class="th-res" style="width:37%;">Résultat obtenu</th><th class="th-ec" style="width:38%;">Écart & analyse</th></tr></thead>
@@ -459,7 +508,7 @@
 
     <!-- 11 - DIFFICULTÉS -->
     <div class="card card-two">
-      <div class="ch"><div class="cn">11</div><div class="ct">Difficultés rencontrées & solutions</div></div>
+      <div class="ch"><div class="cn">12</div><div class="ct">Difficultés rencontrées & solutions</div></div>
       <div class="cb">
         <div class="diff"><div class="diff-h"><i class="ti ti-alert-triangle"></i><span>Dataset vidéo initial de mauvaise qualité</span></div><div class="diff-b"><div><div class="diff-l p">Problème</div><div class="diff-pb">Annotations existantes <strong>incorrectes ou incomplètes</strong> - modèle produisant des détections non exploitables.</div></div><div><div class="diff-l s">Solution & impact</div><div class="diff-sl">Re-annotation complète. <strong>Résultat direct : modèle fiable pour la démo armée française.</strong></div></div></div></div>
         <div class="diff"><div class="diff-h"><i class="ti ti-alert-triangle"></i><span>Annotation LiDAR avec CVAT</span></div><div class="diff-b"><div><div class="diff-l p">Problème 1 - Workflow</div><div class="diff-pb">Conversion manuelle des PCD au format CVAT chronophage + interface inadaptée à l'annotation 3D.</div><div class="diff-l p" style="margin-top:6px;">Problème 2 - Précision</div><div class="diff-pb">Câbles <strong>fins, linéaires, peu représentés</strong> dans les nuages de points - difficiles à annoter en 3D.</div></div><div><div class="diff-l s">Solution & impact</div><div class="diff-sl">Développement d'un <strong>outil dédié</strong> : pipeline d'extraction, interface adaptée et critères stricts pour les câbles.</div></div></div></div>
@@ -468,7 +517,7 @@
 
     <!-- 12 - IMPACT -->
     <div class="card card-one">
-      <div class="ch"><div class="cn">12</div><div class="ct">Impact & projection</div></div>
+      <div class="ch"><div class="cn">13</div><div class="ct">Impact & projection</div></div>
       <div class="cb">
         <div class="impact">
           <div class="impact-t">Valeur produite - Airbus Helicopters</div>
@@ -494,7 +543,7 @@
 
     <!-- 13 - DÉMO ARMÉE -->
     <div class="card card-full">
-      <div class="ch"><div class="cn">13</div><div class="ct">Résultat clé - démonstration opérationnelle</div></div>
+      <div class="ch"><div class="cn">14</div><div class="ct">Résultat clé - démonstration opérationnelle</div></div>
       <div class="cb">
         <div class="demo">
           <div class="demo-num">S9</div>
@@ -509,7 +558,7 @@
 
     <!-- 14 - CONCLUSION -->
     <div class="card card-full">
-      <div class="ch"><div class="cn">14</div><div class="ct">Conclusion</div></div>
+      <div class="ch"><div class="cn">15</div><div class="ct">Conclusion</div></div>
       <div class="cb">
         <div class="conclu">
           <div class="conclu-q">Ce stage illustre que la <strong>qualité des données est le fondement de tout système d'IA performant</strong>. Face à des outils inadaptés, j'ai su m'adapter en développant une solution sur mesure. Cette démarche a directement contribué à un résultat concret : un modèle de détection d'obstacles opérationnel. Au-delà de la technique, ce stage m'a permis de comprendre les enjeux d'un projet IA en milieu industriel critique, de la donnée brute jusqu'au modèle déployé.</div>
