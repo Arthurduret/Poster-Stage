@@ -71,16 +71,41 @@
     <div class="card card-c2">
       <div class="ch"><div class="cn">2</div><div class="ct">Contexte, enjeux & politiques entreprise</div></div>
       <div class="cb">
-        <div class="hbar">
-          <i class="ti ti-alert-triangle"></i>
-          <div class="hbar-t">Le vol à basse altitude expose les aéronefs à des obstacles <strong>difficiles à percevoir</strong> : câbles et pylônes sont invisibles aux radars classiques. La stratégie IA Airbus vise à automatiser leur détection.</div>
-        </div>
 
-        <div class="enjeux">
-          <div class="enjeu"><i class="ti ti-eye-off"></i><div class="enjeu-t">Détection difficile</div><div class="enjeu-d">Câbles fins, linéaires, quasi-invisibles pour les capteurs classiques à basse altitude.</div></div>
-          <div class="enjeu"><i class="ti ti-brain"></i><div class="enjeu-t">IA data-dépendante</div><div class="enjeu-d">Performances du modèle directement conditionnées par la qualité des données annotées.</div></div>
-          <div class="enjeu"><i class="ti ti-shield-check"></i><div class="enjeu-t">Zero Accident Airbus</div><div class="enjeu-d">SMS proactif, membre VAST - conviction que tout accident est évitable.</div></div>
-          <div class="enjeu"><i class="ti ti-leaf"></i><div class="enjeu-t">RSE & net-zéro 2050</div><div class="enjeu-d">Certification SAF, hélicoptère hybride-électrique, réduction empreinte opérationnelle.</div></div>
+        <!-- Flow narratif -->
+        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:8px;">
+
+          <!-- Étape 1 -->
+          <div style="display:flex;gap:8px;align-items:flex-start;padding:7px 9px;border:1px solid rgba(239,68,68,0.25);border-radius:6px 6px 0 0;background:rgba(239,68,68,0.04);">
+            <i class="ti ti-alert-triangle" style="font-size:13px;color:#fca5a5;flex-shrink:0;margin-top:1px;"></i>
+            <div>
+              <div style="font-family:var(--font-title);font-size:8px;font-weight:700;color:#fca5a5;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Accidents en vol basse altitude</div>
+              <div style="font-size:7.5px;color:var(--muted);font-family:var(--font-body);line-height:1.5;">Airbus identifie les <strong style="color:#fca5a5;">câbles & pylônes</strong> comme cause majeure d'accidents - objets fins, invisibles aux radars classiques, impossibles à éviter sans aide embarquée.</div>
+            </div>
+          </div>
+
+          <div style="width:2px;background:linear-gradient(rgba(239,68,68,0.3),rgba(0,174,239,0.3));height:10px;margin-left:19px;"></div>
+
+          <!-- Étape 2 -->
+          <div style="display:flex;gap:8px;align-items:flex-start;padding:7px 9px;border:1px solid var(--border-acc);border-radius:0;background:rgba(0,174,239,0.04);">
+            <i class="ti ti-cpu" style="font-size:13px;color:var(--blue-light);flex-shrink:0;margin-top:1px;"></i>
+            <div>
+              <div style="font-family:var(--font-title);font-size:8px;font-weight:700;color:var(--blue-light);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Solution : LiDAR + Intelligence Artificielle</div>
+              <div style="font-size:7.5px;color:var(--muted);font-family:var(--font-body);line-height:1.5;">Le LiDAR offre la précision centimétrique nécessaire. L'IA, entraînée sur des données annotées, détecte automatiquement les obstacles. <strong style="color:var(--blue-light);">La qualité des données conditionne directement celle du modèle.</strong></div>
+            </div>
+          </div>
+
+          <div style="width:2px;background:linear-gradient(rgba(0,174,239,0.3),rgba(16,185,129,0.3));height:10px;margin-left:19px;"></div>
+
+          <!-- Étape 3 -->
+          <div style="display:flex;gap:8px;align-items:flex-start;padding:7px 9px;border:1px solid rgba(16,185,129,0.25);border-radius:0 0 6px 6px;background:rgba(16,185,129,0.04);">
+            <i class="ti ti-leaf" style="font-size:13px;color:#6ee7b7;flex-shrink:0;margin-top:1px;"></i>
+            <div>
+              <div style="font-family:var(--font-title);font-size:8px;font-weight:700;color:#6ee7b7;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Objectif Net-zéro 2050</div>
+              <div style="font-size:7.5px;color:var(--muted);font-family:var(--font-body);line-height:1.5;">Des trajectoires plus sûres et optimisées réduisent la consommation. La détection embarquée s'inscrit dans la stratégie RSE Airbus : certification SAF, hélicoptère hybride-électrique, zéro accident.</div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Vidéos -->
