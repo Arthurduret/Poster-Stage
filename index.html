@@ -76,22 +76,31 @@
           <div class="hbar-t">Le vol à basse altitude expose les aéronefs à des obstacles <strong>difficiles à percevoir</strong> : câbles et pylônes sont invisibles aux radars classiques. La stratégie IA Airbus vise à automatiser leur détection.</div>
         </div>
 
-        <!-- Vidéo -->
-        <div style="position:relative;border-radius:8px;overflow:hidden;margin:8px 0;border:1px solid var(--border-acc);box-shadow:0 0 20px rgba(0,174,239,0.15);">
-          <video autoplay loop muted playsinline style="width:100%;display:block;border-radius:7px;">
-            <source src="images/demo_lidar.webm" type="video/webm">
-          </video>
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:6px 10px;background:linear-gradient(transparent,rgba(4,8,15,0.85));font-family:var(--font-title);font-size:7.5px;font-weight:600;color:var(--blue-light);letter-spacing:0.5px;text-transform:uppercase;">
-            <i class="ti ti-3d-cube-sphere" style="margin-right:4px;"></i>Nuage de points LiDAR - vol basse altitude
-          </div>
-        </div>
-
         <div class="enjeux">
           <div class="enjeu"><i class="ti ti-eye-off"></i><div class="enjeu-t">Détection difficile</div><div class="enjeu-d">Câbles fins, linéaires, quasi-invisibles pour les capteurs classiques à basse altitude.</div></div>
           <div class="enjeu"><i class="ti ti-brain"></i><div class="enjeu-t">IA data-dépendante</div><div class="enjeu-d">Performances du modèle directement conditionnées par la qualité des données annotées.</div></div>
           <div class="enjeu"><i class="ti ti-shield-check"></i><div class="enjeu-t">Zero Accident Airbus</div><div class="enjeu-d">SMS proactif, membre VAST - conviction que tout accident est évitable.</div></div>
           <div class="enjeu"><i class="ti ti-leaf"></i><div class="enjeu-t">RSE & net-zéro 2050</div><div class="enjeu-d">Certification SAF, hélicoptère hybride-électrique, réduction empreinte opérationnelle.</div></div>
         </div>
+
+        <!-- Vidéos -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;">
+          <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border-acc);box-shadow:0 0 12px rgba(0,174,239,0.12);">
+            <video autoplay loop muted playsinline style="width:100%;display:block;border-radius:5px;">
+              <source src="images/demo_lidar.webm" type="video/webm">
+            </video>
+            <div style="position:absolute;bottom:0;left:0;right:0;padding:4px 7px;background:linear-gradient(transparent,rgba(4,8,15,0.88));font-family:var(--font-title);font-size:6.5px;font-weight:600;color:var(--blue-light);letter-spacing:0.4px;text-transform:uppercase;">
+              <i class="ti ti-3d-cube-sphere" style="margin-right:3px;"></i>LiDAR - vol basse altitude
+            </div>
+          </div>
+          <div style="border-radius:6px;border:1px dashed rgba(0,174,239,0.25);display:flex;align-items:center;justify-content:center;min-height:80px;background:rgba(0,174,239,0.03);">
+            <div style="text-align:center;color:var(--muted2);font-family:var(--font-title);font-size:7px;letter-spacing:0.5px;">
+              <i class="ti ti-video" style="font-size:14px;display:block;margin-bottom:4px;color:var(--border-acc);"></i>
+              Vidéo à venir
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
